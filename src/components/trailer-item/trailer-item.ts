@@ -1,5 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
+import { Nav } from 'ionic-angular';
 
+import { TrailerPage } from '../../pages/trailer/trailer';
 /**
  * Generated class for the TrailerItemComponent component.
  *
@@ -11,9 +13,15 @@ import { Component, Input } from '@angular/core';
   templateUrl: 'trailer-item.html'
 })
 export class TrailerItemComponent {
+  @ViewChild(Nav) nav: Nav;
+
   @Input()
   trailer: any;
 
   constructor() {}
+
+  openDetailPage() {
+    this.nav.setRoot(TrailerPage);
+  }
 
 }

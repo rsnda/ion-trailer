@@ -1,4 +1,10 @@
 <!-- Generated template for the TrailerItemComponent component -->
+<!-- <button ion-item>{{trailer.title}}</button> -->
 
-
-<button ion-item>{{trailer.title}}</button>
+<ion-item (click)="openDetailPage()">
+  <ion-avatar item-start>
+    <img src={{trailer.poster}}>
+  </ion-avatar>
+  <h2>{{trailer.title}}</h2>
+  <p>{{trailer.genre}}</p>
+</ion-item>

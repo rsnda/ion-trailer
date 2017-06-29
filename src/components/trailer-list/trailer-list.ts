@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {sortBy} from 'lodash';
 import {ApiProvider} from '../../providers/api/api';
 
 /**
@@ -24,6 +24,10 @@ export class TrailerListComponent implements OnInit{
         trailers => {
           console.log('Trailers', trailers);
           this.trailers = trailers.json();
+          this.trailers = sortBy(this.trailers,
+            [function(o) {
+              return o.title;
+            }]);
         },
         error => console.log('Error Http', error)
       );
