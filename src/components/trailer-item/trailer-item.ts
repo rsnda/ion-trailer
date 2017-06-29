@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 /**
  * Generated class for the TrailerItemComponent component.
@@ -11,12 +11,9 @@ import { Component } from '@angular/core';
   templateUrl: 'trailer-item.html'
 })
 export class TrailerItemComponent {
+  @Input()
+  trailer: any;
 
-  text: string;
-
-  constructor() {
-    console.log('Hello TrailerItemComponent Component');
-    this.text = 'Hello World';
-  }
+  constructor() {}
 
 }

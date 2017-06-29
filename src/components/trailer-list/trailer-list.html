@@ -2,3 +2,7 @@
 <div>
   {{text}}
 </div>
+
+<ion-list>
+  <trailer-item *ngFor="let trailer of trailers" [trailer]="trailer"></trailer-item>
+</ion-list>
