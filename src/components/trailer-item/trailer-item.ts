@@ -1,5 +1,5 @@
 import { Component, Input, ViewChild } from '@angular/core';
-import { Nav } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 
 import { TrailerPage } from '../../pages/trailer/trailer';
 /**
@@ -13,15 +13,14 @@ import { TrailerPage } from '../../pages/trailer/trailer';
   templateUrl: 'trailer-item.html'
 })
 export class TrailerItemComponent {
-  @ViewChild(Nav) nav: Nav;
 
   @Input()
   trailer: any;
 
-  constructor() {}
+  constructor(public navCtrl: NavController) {}
 
-  openDetailPage() {
-    this.nav.setRoot(TrailerPage);
+  openDetailPage(event, trailer) {
+    this.navCtrl.push(TrailerPage);
   }
 
 }

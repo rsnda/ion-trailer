@@ -10,6 +10,7 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { FavorisPage } from '../pages/favoris/favoris';
 import { PreferencesPage } from '../pages/preferences/preferences';
+import { TrailerPage } from '../pages/trailer/trailer';
 import { ApiProvider } from '../providers/api/api';
 import { TrailerListComponent } from '../components/trailer-list/trailer-list';
 import { TrailerItemComponent } from '../components/trailer-item/trailer-item';
@@ -20,6 +21,7 @@ import { TrailerItemComponent } from '../components/trailer-item/trailer-item';
     HomePage,
     LoginPage,
     FavorisPage,
+    TrailerPage,
     PreferencesPage,
     TrailerListComponent,
     TrailerItemComponent
@@ -35,7 +37,8 @@ import { TrailerItemComponent } from '../components/trailer-item/trailer-item';
     HomePage,
     LoginPage,
     FavorisPage,
-    PreferencesPage
+    PreferencesPage,
+    TrailerPage
   ],
   providers: [
     StatusBar,
