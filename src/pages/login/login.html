@@ -17,5 +17,32 @@
 
 
 <ion-content padding>
+  <form [formGroup]="login" (ngSubmit)="logForm()">
+      <!-- EMAIL -->
+      <ion-item>
+        <ion-label stacked>Email</ion-label>
+        <ion-input type="email" formControlName="email" required></ion-input>
+      </ion-item>
+      <div *ngIf="login.controls.email.errors.required">
+        {{ formErrors.email }}
+      </div>
 
+      <!-- PASSWORD -->
+      <ion-item>
+        <ion-label stacked>Password</ion-label>
+        <ion-input type="password" formControlName="password" required></ion-input>
+      </ion-item>
+      <div *ngIf="formErrors.password">
+        {{ formErrors.password }}
+      </div>
+
+      <!-- REMEMBER ME -->
+      <ion-item>
+        <ion-label>Remember Me</ion-label>
+        <ion-checkbox checked="false" formControlName="remember"></ion-checkbox>
+      </ion-item>
+
+      <!-- SUBMIT -->
+    <button ion-button type="submit" [disabled]="!login.valid">Submit</button>
+  </form>
 </ion-content>
