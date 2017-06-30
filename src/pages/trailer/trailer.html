@@ -7,12 +7,19 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Trailer</ion-title>
+    <ion-title>{{trailer.title}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <img width="100%" src={{trailer.poster}}>
+  <h3>{{trailer.genre}}</h3>
+
+  <ul>
+    <li *ngFor="let actor of trailer.actors">{{actor}}</li>
+  </ul>
 
 </ion-content>

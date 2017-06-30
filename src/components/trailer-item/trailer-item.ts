@@ -20,7 +20,7 @@ export class TrailerItemComponent {
   constructor(public navCtrl: NavController) {}
 
   openDetailPage(event, trailer) {
-    this.navCtrl.push(TrailerPage);
+    this.navCtrl.push(TrailerPage, {trailer: this.trailer});
   }
 
 }
